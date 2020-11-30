@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Wallet from '@/components/Wallet'
 import AboutUs from '@/components/AboutUs'
 import Address from '@/components/Address'
+import MyAccount from '@/components/users/MyAccount'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       name: 'Address',
       props: true,
       component: Address
+    },
+    {
+      path: '/myaccount',
+      name: 'myAccount',
+      component: MyAccount
     }
   ]
 })

@@ -1,19 +1,14 @@
 <template>
   <div class="hello">
-    <p>Address</p>
-    <p>{{$route.params.addr}}</p>
+    <p>Wellcome to Soloen solution</p>
   </div>
 </template>
 
 <script>
 export default {
-  props: [
-   'addr'
-  ],
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
