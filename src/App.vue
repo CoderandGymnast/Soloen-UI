@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-link to="/">Home</router-link>
-    <router-link to="/wallet">Connect to Wallet</router-link>
-    <router-link to="/about-us">About Us</router-link>
+    <Header/>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Header from './components/Header.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Header
+  }
 }
 </script>
 

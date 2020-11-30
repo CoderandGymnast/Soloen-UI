@@ -1,15 +1,17 @@
 <template>
   <div class="hello">
-   <p>Home</p>
+   <router-link to="/">Home</router-link>
+    <router-link to="/wallet">Connect to Wallet</router-link>
+    <router-link to="/about-us">About Us</router-link>
+    
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Header',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
