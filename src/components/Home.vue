@@ -1,15 +1,21 @@
 <template>
   <div class="hello">
    <p>Home</p>
+   <div class="col-md-5">
+    <LineChart/>
+   </div>
   </div>
 </template>
 
 <script>
+import LineChart from './Charts/LineChart'
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
+  components: {
+    LineChart
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
