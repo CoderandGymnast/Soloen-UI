@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
     <p>Address</p>
-    <p>{{$route.params.addr}}</p>
   </div>
 </template>
 

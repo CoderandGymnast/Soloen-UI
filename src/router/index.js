@@ -28,9 +28,8 @@ export default new Router({
       component: AboutUs
     },
     {
-      path: '/address/:addr',
+      path: '/address',
       name: 'Address',
-      props: true,
       component: Address
     },
     {
