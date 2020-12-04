@@ -1,10 +1,15 @@
 <template>
   <div class="hello">
-   <router-link to="/">Home</router-link>
-    <router-link to="/wallet">Connect to Wallet</router-link>
-    <router-link to="/about-us">About Us</router-link>
-    
+  <div class="row">
+  <div class="col-md-3" style="background-color:red;height:10px;"></div>
+  <div class="col-md-3" style="background-color:blue;height:10px;"></div>
+  <div class="col-md-3" style="background-color:green;height:10px;"></div>
+  <div class="col-md-3" style="background-color:black;height:10px;"></div>
   </div>
+        <router-link to="/">Home</router-link>
+       <router-link to="/wallet">Connect to Wallet</router-link>
+       <router-link to="/about-us">About Us</router-link>
+</div>
 </template>
 
 <script>
@@ -19,18 +24,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
 li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 </style>
