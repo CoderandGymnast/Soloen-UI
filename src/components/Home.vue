@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
    <p>Home</p>
-   <div class="col-md-5">
+   <div class="col-md-7 LineChart">
     <LineChart/>
    </div>
   </div>
@@ -23,6 +23,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.LineChart{
+  display: block;
+  float: right;
+ 
+}
 h1, h2 {
   font-weight: normal;
 }
