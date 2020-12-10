@@ -5,6 +5,8 @@ import Wallet from '@/components/Wallet'
 import AboutUs from '@/components/AboutUs'
 import Address from '@/components/Address'
 import MyAccount from '@/components/users/MyAccount'
+import Login from '@/components/users/Login'
+import Register from '@/components/users/Register'
 
 Vue.use(Router)
 
@@ -35,6 +37,16 @@ export default new Router({
       path: '/myaccount',
       name: 'myAccount',
       component: MyAccount
+    },
+    {
+      path: '/myaccount/register',
+      name: 'register',
+      component: Register
+    },
+    {
+      path: '/myaccount/login',
+      name: 'login',
+      component: Login
     }
   ]
 })
