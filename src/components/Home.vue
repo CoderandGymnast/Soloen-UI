@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
    <p>Home</p>
-   <div class="col-md-5">
+   <div class="col-md-7 LineChart">
     <LineChart/>
    </div>
   </div>
@@ -25,9 +25,8 @@ export default {
 <style scoped>
 .LineChart{
   display: block;
-  float: right; 
-  width: 620px;
-  height:205px !important;
+  float: right;
+ 
 }
 h1, h2 {
   font-weight: normal;
