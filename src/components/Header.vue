@@ -11,16 +11,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <router-link class="nav-link" to="/wallet">Connect to Wallet</router-link>
-          </li>
-          <li class="nav-item active">
             <router-link class="nav-link" to="/about-us">About Us</router-link>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <ul class="navbar-nav " style="float:right">  
+          <li class="nav-item active">
+            <router-link class="nav-link" to="/wallet">Connect to Wallet</router-link>
+          </li>
+           <li class="nav-item active log">
+            <router-link class="nav-link " to="/myaccount/login">Register/ Login</router-link>
+          </li>
+        </ul>
       </div>
 </nav>
   </div>
@@ -39,6 +40,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+nav {
+  width: 89%;
+}
+
 img {
   margin-left: 10px;
   width:180px;
