@@ -28,6 +28,7 @@ export default {
   color: #2c3e50;
 }
 .View {
+  margin-top:50px;
   min-height:921px;
 }
 </style>

@@ -8,7 +8,7 @@ import Chart from 'chart.js'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
+import 'mdbvue/lib/css/mdb.min.css';
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(Chartkick.use(Chart))
