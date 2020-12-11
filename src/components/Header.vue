@@ -14,7 +14,7 @@
             <router-link class="nav-link" to="/about-us">About Us</router-link>
           </li>
         </ul>
-        <ul class="navbar-nav " style="float:right">  
+        <ul class="navbar-nav" style="float:right">
           <li class="nav-item active">
             <router-link class="nav-link" to="/wallet">Connect to Wallet</router-link>
           </li>

@@ -7,7 +7,7 @@
 <script>
 export default {
   props: [
-   'addr'
+    'addr'
   ],
   name: 'HelloWorld',
   data () {
