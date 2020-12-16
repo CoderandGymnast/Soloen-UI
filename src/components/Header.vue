@@ -25,6 +25,15 @@
       </div>
 </nav>
   </div>
+  <div  class="row search">
+        <form class="form-inline" style="margin:0px 238px;">
+        <div class="form-group mx-sm-3 mb-2" style="padding-right:15px;">
+          <label for="Search" class="sr-only">Search</label>
+          <input type="text" size="132px" class="form-control" id="Search" placeholder="Search by Address/TXn Hash/Token/Block">
+        </div>
+        <button type="submit" class="btn btn-danger mb-2">Search</button>
+      </form>
+    </div>
 </div>
 </template>
 
@@ -40,10 +49,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.search{
+  margin-top:30px
+}
 nav {
   width: 89%;
 }
-
 img {
   margin-left: 10px;
   width:180px;

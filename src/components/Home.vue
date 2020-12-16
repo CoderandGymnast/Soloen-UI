@@ -1,14 +1,5 @@
 <template>
   <div class="container-fluid">
-    <div  class="row">
-        <form class="form-inline" style="margin:0px 238px;">
-        <div class="form-group mx-sm-3 mb-2" style="padding-right:15px;">
-          <label for="Search" class="sr-only">Search</label>
-          <input type="text" size="132px" class="form-control" id="Search" placeholder="Search by Address/TXn Hash/Token/Block">
-        </div>
-        <button type="submit" class="btn btn-danger mb-2">Search</button>
-      </form>
-    </div>
       <div class="col-md-9 mx-auto" style="min-height:862px;">
         <div class="row">
         <div class="col-md-6 block">
