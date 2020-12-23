@@ -25,9 +25,9 @@
       </div>
 </nav>
   </div>
-  <div  class="row search">
+  <div  class="row  search mx-auto">
         <form class="form-inline" style="margin:0px 238px;">
-        <div class="form-group mx-sm-3 mb-2" style="padding-right:15px;">
+        <div class="form-group mx-sm-3 mb-2">
           <label for="Search" class="sr-only">Search</label>
           <input type="text" size="132px" class="form-control" id="Search" placeholder="Search by Address/TXn Hash/Token/Block">
         </div>

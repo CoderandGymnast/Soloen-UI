@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    <p>Register</p>
+  <div class="col-md-9 mx-auto">
+    <h1 style ="float:left">Register</h1>
   </div>
 </template>
 

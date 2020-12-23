@@ -1,6 +1,9 @@
 <template>
-  <div class="hello">
-    <p>Login</p>
+   <div class="col-md-9 mx-auto">
+    <div class ="row">
+    <h1 style ="float:left">Login</h1>
+    </div>
+    <div class="row" style ="min-height:200px; background-color:#474747"></div>
   </div>
 </template>
 
