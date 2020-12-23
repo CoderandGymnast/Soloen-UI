@@ -29,7 +29,7 @@
         <form class="form-inline" style="margin:0px 238px;">
         <div class="form-group mx-sm-3 mb-2">
           <label for="Search" class="sr-only">Search</label>
-          <input type="text" size="132px" class="form-control" id="Search" placeholder="Search by Address/TXn Hash/Token/Block">
+          <input type="text" size="141px" class="form-control" id="Search" placeholder="Search by Address/TXn Hash/Token/Block">
         </div>
         <button type="submit" class="btn btn-danger mb-2">Search</button>
       </form>

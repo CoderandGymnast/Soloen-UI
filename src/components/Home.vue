@@ -1,20 +1,18 @@
 <template>
-  <div class="container-fluid">
-      <div class="col-md-9 mx-auto" style="min-height:862px;">
-        <div class="row">
-        <div class="col-md-6 block">
-          <ul class="list-group">
-            <li class="list-group-item list-group-item-danger">Blocks</li>
-            <li class="list-group-item">A simple primary list group item</li>
-            <li class="list-group-item">A simple secondary list group item</li>
-            <li class="list-group-item">A simple success list group item</li>
-            <li class="list-group-item">A simple danger list group item</li>
-            <li class="list-group-item">A simple warning list group item</li>
-            <li class="list-group-item">A simple info list group item</li>
-            <li class="list-group-item">A simple light list group item</li>
-            <li class="list-group-item">A simple dark list group item</li>
-          </ul>
-        </div>
+ <div class="row">
+          <div class="col-md-6 block">
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-danger">Blocks</li>
+              <li class="list-group-item">A simple primary list group item</li>
+              <li class="list-group-item">A simple secondary list group item</li>
+              <li class="list-group-item">A simple success list group item</li>
+              <li class="list-group-item">A simple danger list group item</li>
+              <li class="list-group-item">A simple warning list group item</li>
+              <li class="list-group-item">A simple info list group item</li>
+              <li class="list-group-item">A simple light list group item</li>
+              <li class="list-group-item">A simple dark list group item</li>
+            </ul>
+          </div>
         <div class="col-md-6">
          <div class="row">
             <LineChart class="LineChart"></LineChart>
@@ -30,8 +28,6 @@
         </div>
         </div>
         </div>
-      </div>
-    </div>
 </template>
 
 <script>
@@ -53,7 +49,7 @@ export default {
 .LineChart{
   display: block;
   float: right; 
-  width: 620px;
+  width: 700px;
   height:205px !important;
 }
 h1, h2 {
@@ -72,7 +68,7 @@ ul {
 .transaction ul>li {
   display: inline-block;
   margin: 0 10px;
- width: 600px;
+ width: 652px;
 }
 a {
   color: #42b983;

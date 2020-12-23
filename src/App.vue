@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <Header/>
-    <router-view class="View"></router-view>
+    <div class="container-fluid">
+      <div class="col-md-9 mx-auto" style="min-height:862px;">
+       <router-view class="View"></router-view>
+      </div>
+    </div>
     <div class="footer"> 
     <Footer/>
     </div>
