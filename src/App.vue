@@ -24,6 +24,7 @@ export default {
 </script>
 
 <style>
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -34,5 +35,6 @@ export default {
 .View {
   margin-top:40px;
   min-height:921px;
+  background-color:#FAFAFA;
 }
 </style>
