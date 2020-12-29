@@ -54,6 +54,12 @@ export default {
 .search{
   margin-top:30px
 }
+ input {
+ height:4.375rem;
+}
+button {
+ padding: 26px 32px;
+}
 nav {
   width: 100%;
 }
