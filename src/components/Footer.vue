@@ -13,7 +13,7 @@
       <div class="col-md-4 mx-auto">
 
         <!-- Content -->
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">SOLOEN JSC</h5>
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">SOLOEN .JSC</h5>
         <p>We provide the best solution for your life that will make you more secure with your transactions.</p>
 
       </div>

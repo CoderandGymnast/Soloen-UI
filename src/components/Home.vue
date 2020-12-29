@@ -1,5 +1,5 @@
 <template>
- <div class="row">
+ <div class="row mx-auto" style="width:100%;">
           <div class="col-md-6 block">
             <ul class="list-group">
               <li class="list-group-item list-group-item-danger">Blocks</li>
@@ -49,7 +49,7 @@ export default {
 .LineChart{
   display: block;
   float: right; 
-  width: 700px;
+  width: 664px;
   height:205px !important;
 }
 h1, h2 {

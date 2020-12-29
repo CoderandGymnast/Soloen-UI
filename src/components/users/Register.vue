@@ -21,8 +21,8 @@
       <button type="submit" class="btn btn-danger">Create</button>
       <div class="form-group">
       <div style="float:right;">
-      <span>I have an account ,</span>
-      <router-link to="/myaccount/login" >Login now</router-link>
+      <span>I have an account, </span>
+      <router-link to="/myaccount/login">Login now</router-link>
       </div> 
       </div>
     </form>
