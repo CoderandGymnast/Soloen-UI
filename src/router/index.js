@@ -7,7 +7,7 @@ import Address from '@/components/Address'
 import MyAccount from '@/components/users/MyAccount'
 import Login from '@/components/users/Login'
 import Register from '@/components/users/Register'
-
+import CreateWallet from '@/components/Wallets/CreateWallet'
 Vue.use(Router)
 
 export default new Router({
@@ -28,7 +28,7 @@ export default new Router({
       component: AboutUs
     },
     {
-      path: '/address/:addr',
+      path: '/address',
       name: 'Address',
       props: true,
       component: Address
@@ -47,6 +47,11 @@ export default new Router({
       path: '/myaccount/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/walletconnect/create-wallet',
+      name: 'createwallet',
+      component: CreateWallet
     }
   ]
 })

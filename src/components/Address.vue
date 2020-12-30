@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
     <p>Address</p>
+     <span>Create address</span>
+      <button @click="CreateWallet"  class="btn btn-danger">Bú em đi</button>
     <p>{{$route.params.addr}}</p>
   </div>
 </template>
