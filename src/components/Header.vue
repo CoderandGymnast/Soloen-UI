@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello sticky-top">
   <div class="row">
   <div class="image col-md-1"><img src="static/img/logo.png" alt="logo"></div>
   <div class="nav col-md-11">      
@@ -17,7 +17,7 @@
             </ul>
             <ul class="navbar-nav " style="float:right">  
               <li class="nav-item active">
-                <router-link class="nav-link" to="/wallet">Connect to Wallet</router-link>
+                <router-link class="nav-link" to="/walletconnect/create-wallet">Connect to Wallet</router-link>
               </li>
               <li class="nav-item active log">
                 <router-link class="nav-link " to="/myaccount/login">Register/ Login</router-link>
@@ -27,15 +27,6 @@
     </nav>
  </div>
   </div>
-  <div  class="row  search col-md-9 mx-auto">
-        <form class="form-inline mx-auto">
-        <div class="form-group  mb-2">
-          <label for="Search" class="sr-only">Search</label>
-          <input type="text" size="141px" class="form-control" id="Search" placeholder="Search by Address/TXn Hash/Token/Block">
-        </div>
-        <button type="submit" class="btn btn-danger mb-2">Search</button>
-      </form>
-    </div>
 </div>
 </template>
 

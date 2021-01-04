@@ -52,6 +52,11 @@ export default new Router({
       path: '/walletconnect/create-wallet',
       name: 'createwallet',
       component: CreateWallet
+    },
+    {
+      path: '/walletconnect/import-wallet',
+      name: 'importWallet',
+      component: CreateWallet
     }
   ]
 })

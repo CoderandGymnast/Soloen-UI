@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header/>
+    <Search/>
     <div class="container-fluid">
       <div class="col-md-9 mx-auto" style="min-height:862px;">
        <router-view class="View"></router-view>
@@ -15,10 +16,11 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import Search from './components/header/Search_box.vue'
 export default {
   name: 'App',
   components: {
-    Header,Footer 
+    Header,Footer,Search
   }
 }
 </script>
