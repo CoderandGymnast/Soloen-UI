@@ -9,10 +9,10 @@
     <input
       type="text"
       class="form-control"
-      placeholder="Bú cho em phê"
+      placeholder="Generator"
       id="xiaolin"
     />
-    <button @click="CreateWallet" class="btn btn-danger">Bú em đi</button>
+    <button @click="CreateWallet" class="btn btn-danger">Generate </button>
   </div>
 </template>
 
