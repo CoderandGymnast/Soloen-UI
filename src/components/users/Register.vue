@@ -5,18 +5,18 @@
     <span style ="text-align:center;color:#FFF;margin: 0 auto;font-size: 36px;">Create account</span>
     </div> 
     <div class=" register-email-box mx-auto">
-    <form>
+    <form @submit.prevent='handleRegister'>
       <div class="form-group">
-        <span for="exampleInputEmail1">Email address</span>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter the correct email address">
+        <span for="Email">Email address</span>
+        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" v-model ="Email"  placeholder="Enter the correct email address">
       </div>
       <div class="form-group">
-        <span for="exampleInputPassword1">Password</span>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+        <span for="pswd">Password</span>
+        <input type="password" class="form-control" id="pswd" v-model ="Password" placeholder="Enter your password">
       </div>
       <div class="form-group">
-        <span for="exampleInputPassword2">Confirm password</span>
-        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Enter password again">
+        <span for="confirm_pswd">Confirm password</span>
+        <input type="password" class="form-control" id="confirm_pswd" v-model ="Confirm_Password" placeholder="Enter password again">
       </div>
       <button type="submit" class="btn btn-danger">Create</button>
       <div class="form-group">
@@ -31,10 +31,24 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
-  name: 'HelloWorld',
+  name: 'Register',
+  methods:{
+    async handleRegister(){
+      const response = await axios.post('http://localhost:8000/',{
+            Email: this.Email,
+            Password: this.Password,
+            Confirm_Password:this.Confirm_Password
+        })
+        this.$router.push('/myaccount/login')
+      }
+  },
   data () {
     return {
+      Email: '',
+      Password: '',
+      Confirm_Password: ''
     }
   }
 }

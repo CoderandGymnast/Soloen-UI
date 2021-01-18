@@ -1,29 +1,23 @@
 <template>
-  <div class="hello">
+  <div v-if="user" class="hello">
     
     <div class="row address">
     <hr>
-    <span id="address" style="padding-left:12px;">TGs6rEJzwwhe3wa1SxszCPjk7c4WTPXQYR</span>
+    <span id="address" style="padding-left:12px;">{{address}}</span>
     </div>
     <div class="row accountInfo">
       <div class="col-md-12 totalBalance">
         <div class="card-body">
           <p class="tittle">
-          <span>Total assets</span>
+          <span>Total Balance </span>
           </p>
           <p class="total-trx">
-          <span>0 TRXs</span>
+          <span>{{user.balance/1000000}} TRXs</span>
           </p>
           <p class="currency">
-          <span> ≈ 0 USD</span>
+          <span> ≈ {{user.balance*0.03/1000000}} USD</span>
           </p>
           <p class="operate">
-          <span class="btn btn-sm text-capitalize">
-            <span>Send</span>
-          </span>
-          <span class="btn btn-sm text-capitalize">
-            <span>Receive</span>
-          </span>
           <span class="btn btn-sm text-capitalize">
             <span>Contract</span>
           </span>
@@ -78,11 +72,23 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'HelloWorld',
+  props: [
+    'address'
+  ],
+  async create(){
+    const response = await axios.get('user',{
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem('token')
+      }
+    })
+    this.user = response.data
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      user: ''
     }
   }
 }

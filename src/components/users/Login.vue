@@ -5,15 +5,15 @@
     <span style ="text-align:center;color:#FFF;margin: 0 auto;font-size: 36px;">Login with email</span>
     </div> 
     <div class=" login-email-box mx-auto">
-    <form>
+    <form @submit.prevent='handleLogin'>
       <div class="form-group">
-        <span for="exampleInputEmail1">Email address</span>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <span for="Email">Email address</span>
+        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" v-model="Email" placeholder="Enter email">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div class="form-group">
-        <span for="exampleInputPassword1">Password</span>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <span for="psswd">Password</span>
+        <input type="password" class="form-control" id="psswd" v-model="Password" placeholder="Password">
       </div>
       <button type="submit" class="btn btn-danger">Submit</button>
       <div class="form-group">
@@ -26,10 +26,24 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: 'HelloWorld',
+  name: 'Login',
+  methods: {
+    async handleLogin(){
+      const response = await axios.post('http://localhost:8000/',{
+            Email: this.Email,
+            Password: this.Password,
+        })
+        localStorage.setItem('token',response.data.token)
+        const address = response.data.user['address']
+        this.$router.push(`/myaccount/wallet/${address}`)
+    }
+  },
   data () {
     return {
+      Email: '',
+      Password:''
     }
   }
 }

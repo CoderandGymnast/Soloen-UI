@@ -11,6 +11,7 @@ import CreateWallet from '@/components/Wallets/CreateWallet'
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',
   routes: [
     {
       path: '/',
@@ -18,8 +19,8 @@ export default new Router({
       component: Home
     },
     {
-      path: '/wallet',
-      name: 'Wallet',
+      path: '/myaccount/wallet/:address',
+      props: true,
       component: Wallet
     },
     {
@@ -36,7 +37,7 @@ export default new Router({
     {
       path: '/myaccount',
       name: 'myAccount',
-      component: MyAccount
+      component: MyAccount,
     },
     {
       path: '/myaccount/register',
