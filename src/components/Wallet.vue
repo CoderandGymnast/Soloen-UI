@@ -1,9 +1,9 @@
 <template>
-  <div v-if="user" class="hello">
-    
+  <div class="wallet">
+  <div v-if ="user" class="hello">    
     <div class="row address">
     <hr>
-    <span id="address" style="padding-left:12px;">{{address}}</span>
+    <span id="address" style="padding-left:12px;">{{user.base58 }}</span>
     </div>
     <div class="row accountInfo">
       <div class="col-md-12 totalBalance">
@@ -12,15 +12,18 @@
           <span>Total Balance </span>
           </p>
           <p class="total-trx">
-          <span>{{user.balance/1000000}} TRXs</span>
+          <span>{{user.balance}} SUNs</span>
           </p>
           <p class="currency">
           <span> ≈ {{user.balance*0.03/1000000}} USD</span>
           </p>
           <p class="operate">
-          <span class="btn btn-sm text-capitalize">
-            <span>Contract</span>
-          </span>
+            <span class="btn text-capitalize" style="font-size:23px">
+              <span ><a href="javascript:void(0)" @click="makeContract">Make Contract</a><router-link to="/myaccount/make-contract">Make Contract</router-link></span>
+            </span>
+            <span class="btn text-capitalize" style="font-size:23px">
+              <span ><a href="https://www.trongrid.io/shasta">Receive</a></span>
+            </span>
           </p>
         </div>
       </div>
@@ -69,26 +72,35 @@
     </div>
     </div>
   </div>
+  <div v-if="!user" class="Error">
+  <p style="text-align:center">Something went wrong please try again!!!</p>
+  </div>
+  </div>
 </template>
 
 <script>
 import axios from 'axios'
 export default {
-  name: 'HelloWorld',
-  props: [
-    'address'
-  ],
-  async create(){
-    const response = await axios.get('user',{
+  name: 'wallet',
+  async mounted(){
+    const result = await axios.get('http://localhost:3000/user',{
       headers: {
-        Authorization: 'Bearer ' + localStorage.getItem('token')
-      }
+          Authorization: 'Bearer ' + localStorage.getItem('token')
+        }
     })
-    this.user = response.data
+    this.user = result.data
+    localStorage.setItem('user',this.user.username)
+    localStorage.setItem('address',this.user.base58)
   },
+  methods: {
+    makeContract(){
+      this.$router.push({ path: '/myaccount/make-contract', query: { ownerAddress: `${this.user.base58}` } })
+    }
+  }
+  ,
   data () {
     return {
-      user: ''
+      user:null,
     }
   }
 }
@@ -138,6 +150,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #FF3547;
 }
 </style>

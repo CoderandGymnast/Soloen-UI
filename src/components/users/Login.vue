@@ -2,7 +2,7 @@
   <div class="Login">
     <h1 style ="float:left;width:100%;">Login</h1>
     <div class="row card-header">
-    <span style ="text-align:center;color:#FFF;margin: 0 auto;font-size: 36px;">Login with email</span>
+    <span style ="text-align:center;color:#FFF;margin: 0 auto;font-size: 36px;">LOGIN WITH EMAIL</span>
     </div> 
     <div class=" login-email-box mx-auto">
     <form @submit.prevent='handleLogin'>
@@ -31,13 +31,13 @@ export default {
   name: 'Login',
   methods: {
     async handleLogin(){
-      const response = await axios.post('http://localhost:8000/',{
-            Email: this.Email,
-            Password: this.Password,
+      const response = await axios.post('http://localhost:3000/auth/login',{
+            username: this.Email,
+            password: this.Password,
         })
-        localStorage.setItem('token',response.data.token)
-        const address = response.data.user['address']
-        this.$router.push(`/myaccount/wallet/${address}`)
+        localStorage.setItem('token',response.data.access_token)
+        this.$router.push('/myaccount/wallet/')
+        //location.reload();
     }
   },
   data () {

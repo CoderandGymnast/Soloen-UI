@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header v-if="renderComponent"/>
     <Search/>
     <div class="container-fluid">
       <div class="col-md-9 mx-auto" style="min-height:862px;">
@@ -17,8 +17,22 @@
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import Search from './components/header/Search_box.vue'
+import axios from 'axios'
 export default {
   name: 'App',
+  data() {
+    return {
+      renderComponent:true,
+    }
+  },
+  methods: {
+    forceReRender(){
+      this.renderComponent = false
+      this.$nextTick(()=>
+      this.renderComponent = true
+      )
+    }
+  },
   components: {
     Header,Footer,Search
   }

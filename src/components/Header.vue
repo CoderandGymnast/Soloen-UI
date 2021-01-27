@@ -3,28 +3,26 @@
   <div class="row">
   <div class="image col-md-1"><img src="static/img/logo.png" alt="logo"></div>
   <div class="nav col-md-11">      
-    <nav class="navbar navbar-expand-lg navbar-light">
-            <router-link class="navbar-brand" to="/">Home</router-link>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <b-navbar toggleable="lg" type="dark" variant="danger">
+    <b-navbar-brand href="/">SOLOEN</b-navbar-brand>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <router-link class="nav-link" to="/about-us">About Us</router-link>
-              </li>
-            </ul>
-            <ul class="navbar-nav " style="float:right">  
-              <li class="nav-item active">
-                <router-link class="nav-link" to="/walletconnect/create-wallet">Connect to Wallet</router-link>
-              </li>
-              <li class="nav-item active log">
-                <router-link class="nav-link " to="/myaccount/login">Register/ Login</router-link>
-              </li>
-            </ul>
-          </div>
-    </nav>
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav>
+        <b-nav-item href="/#/about-us">ABOUT US</b-nav-item>
+      </b-navbar-nav>
+      <!-- Right aligned nav items -->
+      <b-navbar-nav  v-if="!address" class="ml-auto">
+      <b-nav-item href="/#/myaccount/register">REGISTER</b-nav-item>
+        <b-nav-item href="/#/myaccount/login" >LOG IN</b-nav-item>
+      </b-navbar-nav>
+      <b-navbar-nav  v-if="address" class="ml-auto">
+        <b-nav-item href="/#/myaccount/wallet/">MY WALLET</b-nav-item>
+        <b-nav-item  @click="HandleClick" >LOG OUT</b-nav-item>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
  </div>
   </div>
 </div>
@@ -33,8 +31,22 @@
 <script>
 export default {
   name: 'Header',
+  methods: {
+    LoginClick(){
+
+    }
+    ,
+    HandleClick(){
+      localStorage.removeItem('token')
+      localStorage.removeItem('user')
+      localStorage.removeItem('address')
+      this.$router.push({path:'/'})
+      //location.reload();
+    }
+  },
   data () {
     return {
+      address: localStorage.getItem('address')
     }
   }
 }

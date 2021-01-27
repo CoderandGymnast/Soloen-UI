@@ -4,14 +4,14 @@ import Home from '@/components/Home'
 import Wallet from '@/components/Wallet'
 import AboutUs from '@/components/AboutUs'
 import Address from '@/components/Address'
-import MyAccount from '@/components/users/MyAccount'
+import Contracts from '@/components/users/Contracts'
 import Login from '@/components/users/Login'
 import Register from '@/components/users/Register'
 import CreateWallet from '@/components/Wallets/CreateWallet'
 Vue.use(Router)
 
 export default new Router({
-  mode:'history',
+  // mode:'history',
   routes: [
     {
       path: '/',
@@ -19,8 +19,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/myaccount/wallet/:address',
+      path: '/myaccount/wallet/',
       props: true,
+      name: 'Wallet',
       component: Wallet
     },
     {
@@ -35,9 +36,9 @@ export default new Router({
       component: Address
     },
     {
-      path: '/myaccount',
-      name: 'myAccount',
-      component: MyAccount,
+      path: '/myaccount/make-contract',
+      name: 'myContract',
+      component: Contracts,
     },
     {
       path: '/myaccount/register',

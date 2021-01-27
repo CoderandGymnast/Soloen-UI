@@ -2,7 +2,7 @@
  <div class="Register">
     <h1 style ="float:left;width:100%;">Register</h1>
     <div class="row card-header">
-    <span style ="text-align:center;color:#FFF;margin: 0 auto;font-size: 36px;">Create account</span>
+    <span style ="text-align:center;color:#FFF;margin: 0 auto;font-size: 36px;">CREATE ACCOUNT</span>
     </div> 
     <div class=" register-email-box mx-auto">
     <form @submit.prevent='handleRegister'>
@@ -36,11 +36,11 @@ export default {
   name: 'Register',
   methods:{
     async handleRegister(){
-      const response = await axios.post('http://localhost:8000/',{
+      await axios.post('register',{
             Email: this.Email,
             Password: this.Password,
             Confirm_Password:this.Confirm_Password
-        })
+          })
         this.$router.push('/myaccount/login')
       }
   },

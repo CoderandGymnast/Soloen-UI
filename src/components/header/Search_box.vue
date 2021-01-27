@@ -1,13 +1,19 @@
 <template>
   <div class="hello">
-  <div class="row  search col-md-9 mx-auto">
-        <form class="form-inline mx-auto">
-        <div class="form-group  mb-2">
-          <label for="Search" class="sr-only">Search</label>
-          <input type="text" size="141px" class="form-control" id="Search" placeholder="Search by Address/TXn Hash/Token/Block">
-        </div>
-        <button type="submit" class="btn btn-danger mb-2">Search</button>
-      </form>
+    <div class="container-fluid">
+      <div class="row  search col-md-9 mx-auto">
+          <form class="form-inline" style="width:100%;">
+            <div class="form-row" style="width:101%;">
+            <div class="col-md-11">
+              <label for="Search" class="sr-only">Search</label>
+              <input type="text" style="min-width: 100%;" class="form-control" id="Search" placeholder="Search by Address...">
+            </div>
+            <div class="col-md-1">
+              <button type="submit" class="btn btn-danger mb-2">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
 </div>
 </template>
@@ -38,6 +44,6 @@ export default {
 button {
  padding: 26px 42px;
  margin:0px 0px 15px 1px;
- float:left;
+ float:right;
 }
 </style>

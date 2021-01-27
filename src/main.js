@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'mdbvue/lib/css/mdb.min.css'
 import 'jquery/dist/jquery.min.js'
-
+import './axios'
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(Chartkick.use(Chart))
